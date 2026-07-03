@@ -792,21 +792,36 @@ main.legal h3 {
 .more-screens {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
-  flex-wrap: wrap;
-  margin-top: var(--space-6);
+  gap: var(--space-5);
+  margin-top: var(--space-7);
   padding-top: var(--space-6);
   border-top: 1px solid var(--line);
 }
 
 .more-screens .device-frame {
-  width: 100px;
+  width: 150px;
+  flex-shrink: 0;
 }
 
-.more-screens p {
+.more-screens-copy {
+  max-width: 34rem;
+}
+
+.more-screens-copy .eyebrow {
+  margin-bottom: var(--space-1);
+}
+
+.more-screens-copy p:not(.eyebrow) {
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+@media (max-width: 560px) {
+  .more-screens {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* Closing CTA */
